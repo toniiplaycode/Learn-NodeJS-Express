@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toniiplaycode/NodeJS-F8-Blog.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "F8",
+    "blog"
+  ],
+  "author": "tonii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toniiplaycode/NodeJS-F8-Blog/issues"
+  },
+  "homepage": "https://github.com/toniiplaycode/NodeJS-F8-Blog#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.21"
+  }
+}
