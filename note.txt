@@ -1,9 +1,11 @@
 - file package.jon được hiểu như là 1 file để khai báo
+- ctrl + c: để stop server
 - file package-lock.json khi mỗi lần file package.jon thay đổi thì package-lock.json sẽ cập nhật theo, file package-lock.jon là file chi tiết của file package.jon, ví dụ mình chỉ cài express framework bên file package.jon nhưng bên file package-lock.jon sẽ phải cài thêm các dependencies(phụ thuộc) cho express framework
 - npm init: khởi tạo, tạo file package.json
 - npm i <package>: tải package(thư viện, framework)
+- npm i : tải file package.json
 - npm install(i) express: cài đặt framework express
-    + framework express: dùng để xử lý các yêu từ HTTP, định tuyến (routing), middleware, xử lý lỗi, đọc/ghi dữ liệu vào Database,...
+    + framework express: dùng để xử lý các yêu từ HTTP, định tuyến (routing), MVC, middleware, xử lý lỗi, đọc/ghi dữ liệu vào Database,...
 - node <tên file>: chạy code (hơi bất tiện là phải chạy lại khi thay đổi code)
 - npm i nodemom --save-dev: dùng nodemom để theo dõi sự thay đổi của code, không cần phải dùng node <tên file> lại nhiều lần để chạy code và thêm "start": "nodemon index.js" ở "scripts" trong file package.json.
 thêm --inspect để có thể debug "start": "nodemon --inspect index.js"
