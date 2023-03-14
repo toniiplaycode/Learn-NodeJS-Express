@@ -5,16 +5,19 @@
 - npm i <package>: tải package(thư viện, framework)
 - npm i : tải file package.json
 - npm install(i) express: cài đặt framework express
-    + framework express: dùng để xử lý các yêu từ HTTP, định tuyến (routing), MVC, middleware, xử lý lỗi, đọc/ghi dữ liệu vào Database,...
-- node <tên file>: chạy code (hơi bất tiện là phải chạy lại khi thay đổi code)
+    + framework express: dùng để xử lý các yêu từ HTTP, định tuyến (routing), Mô hình MVC, midleware, xử lý lỗi, đọc/ghi dữ liệu của Database,...
+- node <tên file>: chạy code (hơi bất tiện là phải chạy lại khi code thay đổi)
 - --save-<tên dependencies muốn đặt>
-- npm i nodemom --save-dev: dùng nodemom để theo dõi sự thay đổi của code, không cần phải dùng node <tên file> lại nhiều lần để chạy code và thêm "start": "nodemon index.js" ở "scripts" trong file package.json.
-thêm --inspect để có thể debug "start": "nodemon --inspect index.js"
+- npm i nodemom --save-dev: dùng nodemom để theo dõi sự thay đổi của code, không cần phải dùng node <tên file> lại nhiều lần để chạy code và thêm "start": "nodemon index.js" ở "scripts" trong file package.json. Thêm --inspect để có thể debug "start": "nodemon --inspect index.js"
 - npm i morgan --save-dev: dùng để quan sát các request từ client lên server
 - template engine: dùng để render giao diện, có sử dụng biến trong HTML, xử lý các điều kiện logic trong file HTML
 - npm i ejs: cài EJS template engine, có vài cái template engine phổ biến là EJS, handleBars, Pug,....
-- cấu trúc lại folder và file để dễ cấu hình, tạo folder src, trong folder src có 2 folder là config và view. Folder config chứa các file để cấu hình hệ thống, trình compiler để dịch code JS
-- npm i --save-dev body-parser: là một middleware(phần mềm trung gian), dùng dể phân tích và xử lý các request HTTP, dữ liệu dạng JOSN, url-encoded, dữ liệu text,...
+- cấu trúc lại folder và file để dễ cấu hình, tạo folder src, trong folder src có 2 folder là configs và views. Folder config chứa các file để cấu hình hệ thống, trình compiler để dịch code JS. Folder views chứa file HTML
+- npm i --save-dev body-parser: là một middleware(phần mềm trung gian), dùng dể phân tích và xử lý các request HTTP, dữ liệu dạng JSON, url-encoded, dữ liệu text,...
 - npm i --save-dev @babel/core @babel/node @babel/preset-env: cài 3 package để trình compiler babel giúp chạy được các phiên bản JS cũ và mới đều tương thích
-- tạo file .babelrc để config cho compiler babel (lên trang medium xem và làm theo) và bên file package.json() chỉnh "start": "nodemon --exec babel-node server.js" để chạy được compiler babel
+- tạo file .babelrc để config cho compiler b abel (lên trang medium xem và làm theo) và bên file package.json() chỉnh "start": "nodemon --exec babel-node server.js" để chạy được compiler babel
 - cấu hình view engine trong file viewEngine.js và file HTML có đuôi là .html đổi thành .ejs
+- các biến tham số cấu hình thì sẽ được để trong file môi trường (tạo file .env), các tham số trong file .env được viết in. Muốn dùng tham số ở file khác thì dùng câu lệnh process.env.<tên tham số> và bắt buộc phải cài package dotenv mới dùng được câu lệnh đó
+- npm i dotenv: package dotenv để có thể sử dụng câu lệnh process.env.<tên tham số>
+- static file được sử dụng để hiển thị các file CSS, hình ảnh, video, âm thanh, file JS lên trang web
+- tạo folder pulic trong folder src để chứa các static file 
